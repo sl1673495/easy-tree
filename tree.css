@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tree-line {
+  font-size: 15px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.tree-line .tree-content {
+  margin-bottom: 10px;
+}
+
+.tree-line>.tree-line {
+  margin-left: 20px;
+  display: none;
+}
+
+.tree-line.expand>.tree-line {
+  display: block;
+}
+
+.tree-content .icon {
+  font-size: 22px;
+  color: #999;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.tree-line.expand>.tree-content>.icon-expand {
+  display: none;
+}
+
+.tree-line:not(.expand)>.tree-content>.icon-shrink {
+  display: none;
+}
+
+.tree-line.leaf .icon{
+  display: none;
+}
