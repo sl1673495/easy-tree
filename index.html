@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./style.css" rel="stylesheet" type="text/css" />
     <link href="./tree.css" rel="stylesheet" type="text/css" />
     <title>tree</title>
 </head>
 
 <body>
-    <div id='tree'></div>
+    <div class="tree-wrap">
+        <div id='tree'></div>
+    </div>
 </body>
 <script src="./util.js"></script>
 <script src="./tree.js"></script>
@@ -34,6 +37,21 @@
             'id': 3,
             'name': 'Friend',
             'pid': 2
+        },
+        {
+            'id': 9,
+            'name': 'Friend friend',
+            'pid': 3
+        },
+        {
+            'id': 10,
+            'name': 'Friend friend friend',
+            'pid': 9
+        },
+        {
+            'id': 11,
+            'name': 'Friend friend friend friend',
+            'pid': 10
         },
         {
             'id': 4,
