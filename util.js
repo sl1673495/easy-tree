@@ -1,17 +1,16 @@
 function initDom(html) {
-  var div = document.createElement('div')
-  div.innerHTML = html
-  return div.childNodes[0]
+	var div = document.createElement('div')
+	div.innerHTML = html
+	return div.childNodes[0]
 }
 
-function find(arr, filter) {
-  var ret = null
-  for (var i = 0; i < arr.length; i++) {
-    var cur = arr[i]
-    if (filter(cur)) {
-      ret = cur
-      break
-    }
-  }
-  return ret
+// 将id格式化，找出最外层id
+function normalizedId(id) {
+	var idInt = Number(id)
+		// id是非数字类型 直接return
+	if(isNaN(idInt)) {
+		return id
+	} else {
+		return idInt
+	}
 }

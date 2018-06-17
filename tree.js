@@ -3,7 +3,7 @@
     var ret = []
     for (var i = 0; i < treeJson.length; i++) {
       var cur = treeJson[i]
-      if (!cur.pid) {
+      if (!normalizedId(cur.pid)) {
         ret.push(cur)
       }
     }
