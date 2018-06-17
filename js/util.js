@@ -34,3 +34,30 @@ function normalizedId(id) {
 		return idInt
 	}
 }
+
+// 随机生成树json
+function initRandomTree() {
+	var MAX_LEVEL = 5
+	var ret = []
+	var levels = []
+	for(var i = 0; i < MAX_LEVEL; i++) {
+		ret.push({
+			name: '第一层' + i
+		})
+		levels.push(1)
+	}
+	var initChild = function(node, idx) {
+		levels[idx] ++
+		(node.children = []).push({
+			name: '内层' + idx
+		});
+		(levels[idx] < MAX_LEVEL) && initChild(node.children[0], idx)
+	}
+
+	for(var i = 0; i < ret.length; i++) {
+		var cur = ret[i]
+		initChild(cur, i)
+	}
+	initChild(ret)
+	return ret
+}
