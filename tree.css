@@ -1,11 +1,10 @@
 .tree-line {
   font-size: 15px;
   color: #999;
-  margin-bottom: 15px;
 }
 
 .tree-line .tree-content {
-  margin-bottom: 10px;
+	padding: 10px;
   white-space: nowrap;
 }
 

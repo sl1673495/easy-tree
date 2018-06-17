@@ -48,11 +48,6 @@
 
   function handleClickNode(e) {
     e.stopPropagation()
-    var paths = e.path
-    var clsInPaths = find(paths, function(dom) {
-      return dom.classList && dom.classList.contains('tree-content')
-    })
-    if (!clsInPaths) return
     var clickLine = e.currentTarget
     var cls = clickLine.classList
     var isExpand = cls.contains('expand')
