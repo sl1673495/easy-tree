@@ -19,9 +19,8 @@
 			var cls = clickLine.classList
 			var isExpand = cls.contains('expand')
 			isExpand
-				?
-				cls.remove('expand') :
-				cls.add('expand')
+			  ? cls.remove('expand') 
+			  : cls.add('expand')
 		},
 		initTree: function(el, nodeList, options) {
 			for(var i = 0; i < nodeList.length; i++) {
