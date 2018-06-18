@@ -37,9 +37,9 @@
 					)
 				)
 				el.appendChild(treeLine)
-				var children = node.children
-				if(children && children.length) {
-					treeUtils.initTree(treeLine, node.children, options)
+				var chd = node.children
+				if(chd && chd.length) {
+					treeUtils.initTree(treeLine, chd, options)
 				} else {
 					treeLine.classList.add('leaf')
 				}
