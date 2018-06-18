@@ -3,12 +3,6 @@ function initTreeJson(treeJson, idKey, pidKey, childKey) {
 	pidKey = pidKey || 'pid'
 	childKey = childKey || 'children'
 	var ret = []
-	for(var i = 0; i < treeJson.length; i++) {
-		var cur = treeJson[i]
-		if(!normalizedId(cur[pidKey])) {
-			ret.push(cur)
-		}
-	}
 	var initChild = function(node) {
 		for(var i = 0; i < treeJson.length; i++) {
 			var cur = treeJson[i]
@@ -18,8 +12,12 @@ function initTreeJson(treeJson, idKey, pidKey, childKey) {
 			}
 		}
 	}
-	for(var i = 0; i < ret.length; i++) {
-		initChild(ret[i])
+	for(var i = 0; i < treeJson.length; i++) {
+		var cur = treeJson[i]
+		if(!normalizedId(cur[pidKey])) {
+			ret.push(cur)
+			initChild(cur)
+		}
 	}
 	return ret
 }
