@@ -30,9 +30,9 @@
 				treeLine.appendChild(
 					utils.initDom(
 						'<div class="tree-content">' +
-						'<span class="icon icon-expand">+</span>' +
-						'<span class="icon icon-shrink">-</span>' +
-						node.name +
+							'<span class="icon icon-expand">+</span>' +
+							'<span class="icon icon-shrink">-</span>' +
+							node.name +
 						'</div>'
 					)
 				)
